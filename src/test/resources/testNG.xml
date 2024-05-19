@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "https://testng.org./testng-1.0.dtd">
+<suite name="DemoSuite">
+    <test name="LoginViaTestNGTags">
+        <parameter name="URL" value="https://naveenautomationlabs.com/opencart/index.php?route=account/login"></parameter>
+        <classes>
+            <class name="org.testNgAnnotations.com.LoginScript">
+                <methods>
+                    <include name="Logout"/>
+                    <include name="EnterLoginDetails"/>
+                    <include name="EnterTheURL"/> <!--Logout, EnterTheURL, EnterLoginDetails -->
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
+
+<!-- Here in the Test Class if @Test is present then it will pick the
+order from there even the order is given over here -->
